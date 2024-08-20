@@ -50,7 +50,10 @@ async function run() {
           })
           res.send(token);
       });
-
+      
+      app.get("/user", (req, res) => {
+          
+      })
 
 
 
