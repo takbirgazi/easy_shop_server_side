@@ -27,7 +27,6 @@ async function run() {
     const users = database.collection("users");
 
       // Token Verify
-      
     const verifyToken = (req, res, next) => {
       if (!req.headers.authorization) {
         return res.status(401).send({ message: 'Unauthorize access' })
@@ -44,13 +43,13 @@ async function run() {
 
 
     //JWT API
-    app.post("/jwt", (req, res) => {
-      const user = req.body;
-      const token = jwt.sign(user, process.env.JWT_ACCESS_TOKEN, {
-        expiresIn: "1h"
-      })
-      res.send(token);
-    })
+      app.post("/jwt", (req, res) => {
+          const user = req.body;
+          const token = jwt.sign(user, process.env.JWT_ACCESS_TOKEN, {
+              expiresIn: "1h"
+          })
+          res.send(token);
+      });
 
 
 
