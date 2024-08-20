@@ -23,12 +23,8 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     // await client.connect();
 
-    const database = client.db("healthCare");
+    const database = client.db("easyShop");
     const users = database.collection("users");
-    const reviews = database.collection("reviews");
-    const addBanner = database.collection("addBanner");
-    const allTests = database.collection("allTests");
-    const allAppointed = database.collection("appointed");
 
     // Token Verify
     const verifyToken = (req, res, next) => {
