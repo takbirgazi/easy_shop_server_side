@@ -52,7 +52,7 @@ async function run() {
       });
       
       app.get("/user", (req, res) => {
-          
+          res.send("this is is user API");
       })
 
 
