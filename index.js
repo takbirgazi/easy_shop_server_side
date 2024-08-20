@@ -26,7 +26,8 @@ async function run() {
     const database = client.db("easyShop");
     const users = database.collection("users");
 
-    // Token Verify
+      // Token Verify
+      
     const verifyToken = (req, res, next) => {
       if (!req.headers.authorization) {
         return res.status(401).send({ message: 'Unauthorize access' })
